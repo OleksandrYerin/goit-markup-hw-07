@@ -433,6 +433,7 @@ footer .social-icons {
     background: var(--IRIS);
     border-radius: 4px;
     color: var(--WHITE);
+    cursor: pointer;
     margin-left: 24px;
     font-weight: 500;
     font-size: 16px;
