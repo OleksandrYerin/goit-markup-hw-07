@@ -33,14 +33,38 @@ img {
 nav {
     display: flex;
 }
+/* @media only screen and (min-width: 768px) {
+.header-main {
+    padding: 16px;
+}
+} */
 .header-main > .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .container { 
-    max-width: 1158px;
+    min-width: 320px;
+    max-width: 428px;
+    margin: 0 auto;
+    padding: 16px;
+    outline-offset: -2px;
+    outline: 2px dashed green;
+    /* padding: 0 16px;  */
+
+    /* для десктоп max-width: 1158px;
     padding: 0 15px; 
-    margin: 0 auto; 
+    margin: 0 auto;  */
+}
+@media only screen and (min-width: 768px) {
+    .container {    
+        max-width: 768px;
+  }
+}
+@media only screen and (min-width: 768px) {
+.container {
+    max-width: 1158px;
+}
 }
 .hero > .container {
     text-align: center;
@@ -51,10 +75,17 @@ nav {
 .list {
     list-style-type: none;
 }
-.menu-nav {
+
+.menu-nav{
+display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .menu-nav { 
     position: relative;
     display: flex;
     gap: 40px;
+}
 }
 .menu {
     position: relative;    
@@ -85,24 +116,56 @@ nav {
  .link {
     text-decoration: none;
 }
+
 .address-list {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .address-list {
+    display: block;
+    }
+}
+   
+@media only screen and (min-width: 1158px) {
+    .address-list {
     display: flex;
     gap: 40px;
+}
 }
 .contacts {
 font-style: normal;
 }
+.address-item:first-child{
+    margin-bottom: 12px;
+}
+/* @media only screen and (min-width:1158px) {
+    .address-item {
+
+    }
+} */
 .link-address {
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.04em;
     color: var(--SLATE);
-    text-decoration: none;
+    text-decoration: none; 
+}
+
+@media only screen and (min-width:1158px) {
+    .link-address {
+ font-size: 16px;
+    line-height: 1.28;
+    letter-spacing: 0.02;  
     padding: 24px 0;
- }
+   
+
+}
+}
+
 .logo {
     display: block;
     text-transform: uppercase;    
@@ -128,7 +191,8 @@ header .logo {
     }
 .hero {
     max-width: 1440px;
-    height: 600px;
+    min-width: 320px;
+    height: 432px;
     background-image: linear-gradient(
     rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
         ),
@@ -138,16 +202,70 @@ header .logo {
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-    padding: 188px 0px;
+    padding: 112px 0px;
     }
-.header-list-item {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    @media only screen and (min-width: 768px) {
+    .hero { 
+    height: 436px;    
+  
+    }
+    @media only screen and (min-width: 1158px) {
+        .hero { 
+        height: 600px;
+        padding: 188px 0px;}
+        }
+            }
+    .header-list-item {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
     letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize; 
     color: var(--NAVY_BLUE);
     margin-bottom: 8px;
 }
+@media only screen and (min-width: 768px){
+    .header-list-item {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;    
+    }
+   }
+   @media only screen and (min-width: 1158px) {
+    .header-list-item {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2;
+    }
+}
+/* .container {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+@media only screen and (min-width: 428px) {
+    .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    }
+    @media only screen and (min-width: 768px) {
+        .container {
+            padding-right: 108px;
+        width: 768px;
+    }
+}
+@media only screen and (min-width: 1158px) {
+    .container
+    {
+    width: 1158px;
+
+    }
+    } */
 .features {
     padding: 120px 0 120px;
 }
@@ -167,14 +285,40 @@ header .logo {
 .features-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .features-list {
+        row-gap: 72px;
+        column-gap: 24px;
+}
+}
+
+@media only screen and (min-width: 1158px) {
+    .features-list {
+        display: flex;
+        gap: 24px;
+        padding-left: 0;
+    }
+}
+
 .features-item {
     font-weight: 500;
-    flex-basis: calc((100% - 72px) / 4);    
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+@media only screen and (min-width: 768px) {
+    .features-item {
+     width: calc((100% - 24px) / 2);
+}
+}
+@media only screen and (min-width: 1158px) {
+    .features-item {
+     width: calc((100% - 72px) / 4);
+}
 }
 .feature-prg {
     line-height: 1.5;
@@ -185,13 +329,19 @@ header .logo {
     margin-bottom: 8px;
 }
 .feature-conteiner {
-    display: flex;
+    display: none;
+
+}
+@media only screen and (min-width: 1158px) {
+    .feature-conteiner {
+        display: flex;
     justify-content: center;
     align-items: center;
     height: 112px;
     margin-bottom: 8px;
     background-color: var(--CLOUD);
     border-radius: 4px;
+    }
 }
 .feature-icons {
     object-fit: cover;
@@ -255,13 +405,28 @@ header .logo {
 }
 .solution {
     color: var(--WHITE);
-    font-weight: 700;
-    max-width: 496px;
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-    margin: 0 auto;
+font-size: 36px;
+max-width: 496px;
+line-height: 0.95;
+font-weight: 700;
+ margin: 0 auto;
+ letter-spacing: 0.02em; 
 }
+
+@media only screen and (min-width:768px) {
+    .solution {
+     font-size: 56px;
+line-height: 0.91;   
+    }
+}
+@media only 
+screen and (min-width:1158px) {
+   .solution {
+        font-size: 56px;
+    line-height: 1.07;  
+   }
+}
+
 .button {
     display: block; 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -276,11 +441,22 @@ header .logo {
     border-radius: 4px;
     color: var(--WHITE);
     cursor: pointer;
-    margin: 48px auto 0;
+    margin: 72px auto 0;
     min-width: 169px; 
     height: 56px;
     border: none; 
 }
+@media only screen and (min-width:768px) {
+    .button {
+    margin: 36px auto 0;
+}
+}
+@media only screen and (min-width:1158px) {
+    .button {
+    margin: 48px auto 0;
+}
+}
+
 .button:hover,
 .button:focus {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
