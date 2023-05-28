@@ -17,10 +17,7 @@ body {
     background-color: var(--WHITE);
     color: var(--SLATE);
 }
-header {
-    border-bottom: 1px solid var(--CORNFLOWER);
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
+
 ul, ol, h1, h2, h3, p {
     padding: 0;
     margin: 0;
@@ -35,9 +32,13 @@ nav {
     display: flex;
 }
 
+.header-main {
+    border-bottom: 1px solid var(--CORNFLOWER);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 @media only screen and (max-width: 767px) {
     .header-main {
-        position:fixed;
+        position: fixed;
         top: 0;
         width: 100%;
         background: var(--WHITE);
@@ -57,13 +58,6 @@ nav {
     max-width: 428px;
     margin: 0 auto;
     padding: 16px;
-    outline-offset: -2px;
-    outline: 2px dashed green;
-    /* padding: 0 16px;  */
-
-    /* для десктоп max-width: 1158px;
-    padding: 0 15px; 
-    margin: 0 auto;  */
 }
 @media only screen and (min-width: 768px) {
     .container {    
@@ -152,11 +146,7 @@ nav {
 .address-item:first-child{
     margin-bottom: 12px;
 }
-/* @media only screen and (min-width:1158px) {
-    .address-item {
 
-    }
-} */
 .link-address {
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -172,7 +162,7 @@ nav {
     .link-address {
         font-size: 16px;
         line-height: 1.5;
-        letter-spacing: 0.02;  
+        letter-spacing: 0.02em;  
         padding: 24px 0;
     }
 }
@@ -229,7 +219,7 @@ header .logo {
     background-image: linear-gradient(
     rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
         ),
-    url(../images/icon-card/office_mobile@1x.jpg);
+    url(./images/icon-card/office_mobile@1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -243,7 +233,7 @@ header .logo {
         background-image: linear-gradient(
         rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
         ),
-        url(../images/icon-card/office_mobile@2x.jpg);        
+        url(./images/icon-card/office_mobile@2x.jpg);        
     }       
 }
 
@@ -280,28 +270,7 @@ header .logo {
         url(../images/icon-card/office_desktop@2x.jpg);        
     }       
 }
-    /* @media only screen and (min-width: 768px) {
-    .hero { 
-        height: 436px;    
-    }
-    @media (min-divece-pixel-ratio: 2),
-    (min-resolutoion: 192dpi),
-    (min-resolutoion: 2dppx) {
-.hero {
-    background-image: linear-gradient(
-    rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
-        ),
-    url(../images/img-name.jpg); */
-    /* приклад srcset="./images/gallery/img-1_lg.webp 1x, ./images/gallery/img-1_lg@2x.webp 2x" */
-/* }
-    }
-        
-    @media only screen and (min-width: 1158px) {
-        .hero { 
-        height: 600px;
-        padding: 188px 0px;}
-        }
-            } */
+
 .header-list-item {
     font-size: 36px;
     font-weight: 700;
@@ -326,40 +295,15 @@ header .logo {
     }
 }
 
-
-/* .container {
-    padding-right: 16px;
-    padding-left: 16px;
-}
-@media only screen and (min-width: 428px) {
-    .container {
-    width: 428px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-    }
-    @media only screen and (min-width: 768px) {
-        .container {
-            padding-right: 108px;
-        width: 768px;
-    }
-}
-@media only screen and (min-width: 1158px) {
-    .container
-    {
-    width: 1158px;
-
-    }
-    } */
- 
 .features {
     padding: 80px 0;
 } 
-@media only screen and(min-width:1158px){
+@media only screen and (min-width:1158px) {
     .features {
-        padding: 120px 0 120px;
+        padding: 120px 0;
     }
 }
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -378,7 +322,6 @@ header .logo {
     flex-wrap: wrap;
     gap: 72px;
 }
-
 
 @media only screen and (min-width: 768px) {
     .features-list {
@@ -453,7 +396,6 @@ header .logo {
    fill: var(--CLOUD);
 }
 
-    /* приклад srcset="./images/gallery/img-1_lg.webp 1x, ./images/gallery/img-1_lg@2x.webp 2x" */
 .social-link,
 .footer-link {
     display: flex;
@@ -592,7 +534,6 @@ screen and (min-width:1158px) {
         gap: 24px;
         row-gap: 64px;
         justify-content: center;   
-        
     }
 }
 @media only screen and (min-width:1158px) {
@@ -724,10 +665,6 @@ screen and (min-width:1158px) {
     .bottom {
         display: block;
     }
-}
-.bottom-logo-container{
-    /* flex-direction: column;
-    justify-content: center; */
 }
 @media only screen and (min-width: 1158px) {
    .bottom-logo-container{
@@ -1200,7 +1137,6 @@ footer .social-icons {
     background-color: var(--OCEAN); 
 }
 
-
 .menu-container {
     position: fixed;
     top: 0;
@@ -1261,7 +1197,6 @@ footer .social-icons {
     color: var(--SLATE)
 }
 
-
 @media only screen and (max-width: 428px) {
     .address-item-mobile .tel {
     font-size: calc(36 * (100vw - 75px) / (428 - 75));
@@ -1272,27 +1207,3 @@ footer .social-icons {
     margin-top: 48px;
     gap: 56px;
 }
-
-/* .mobile-menu  {
-           justify-content: flex-start;
-        gap: calc((100% - 4 * 40px) / 3);
-        @media only screen and (min-width: 403px) {
-          gap: 56px;
-        }
-      } 
-
-      це для телефона @media only screen and (max-width: 428px) {
-
-        font-size: calc(36 * (100vw - 75px) / (428 - 75)); */
-      
-
-
-/*це для список margin-bottom: auto;
-між елементами першого і другого списку margin-bottom: 40px; (крім останніх) або gap
-на третій список
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-top: 48px; */
-
-
