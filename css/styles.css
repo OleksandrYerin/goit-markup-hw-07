@@ -69,9 +69,14 @@ nav {
 }
 @media only screen and (min-width: 1158px) {
     .container {
-        max-width: 1128px;
+        max-width: 1440px;
         margin: 0 auto;
-        padding: 0;
+        padding: 0 156px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .container {
+        padding: 0 16px;
     }
 }
 .hero > .container {
@@ -136,7 +141,7 @@ nav {
     }
 }
    
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1157px) {
     .address-list {
         display: flex;
         gap: 40px;
@@ -256,6 +261,7 @@ nav {
 @media only screen and (min-width: 1158px) {
     .hero {
         max-width: 1440px;
+        padding: 188px 0px;
     }
 }
 
@@ -711,6 +717,11 @@ screen and (min-width:1158px) {
         margin-right: 120px;
     } 
 }
+@media only screen and (min-width: 1158px) {
+    .bottom-logo-container {
+        margin-right: 120px;
+    }
+}
 
 .bottom-container {
     display: flex;
@@ -731,6 +742,7 @@ screen and (min-width:1158px) {
         width: auto;    
         align-items: baseline;
         padding: 0;
+        column-gap: 0;
     }
 } 
 
@@ -848,7 +860,7 @@ footer .social-icons {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--WHITE);
-        margin-left: auto;
+        margin-left: 80px;
     }
  }
  
